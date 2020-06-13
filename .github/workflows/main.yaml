@@ -20,13 +20,13 @@ jobs:
         uses: ./.github/actions/php
 
       - name: Installing Composer
-        run: ./.github/scripts/run-composer.sh
+        uses: ./.github/actions/composer
 
       - name: Running PHPStan
-        run: ./.github/scripts/run-phpstan.sh
+        uses: ./.github/actions/phpstan
 
       - name: Running PHPInsights
-        run: ./.github/scripts/run-phpinsights.sh
+        uses: ./.github/actions/phpinsights
 
       - name: Running PHPUnit
-        run: ./.github/scripts/run-phpunit.sh
+        run: ./vendor/bin/phpunit
