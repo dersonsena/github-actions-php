@@ -28,5 +28,8 @@ jobs:
       - name: Running PHPInsights
         uses: ./.github/actions/phpinsights
 
+      - name: Running PHPCS
+        run: ./vendor/bin/phpcs
+
       - name: Running PHPUnit
         run: ./vendor/bin/phpunit
